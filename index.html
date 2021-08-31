@@ -108,6 +108,13 @@
     itemsList.addEventListener("click", toggleDone);
     checkAll.addEventListener("click", selectAll);
     uncheckAll.addEventListener("click", unselectAll);
+
+    // clears local storage and display
+    clear.addEventListener("click", function() {
+      localStorage.clear();
+      itemsList.innerHTML = "";
+      items.length = 0;
+    });
     populateList(items, itemsList);
   </script>
 
